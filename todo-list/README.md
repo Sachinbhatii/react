@@ -1,48 +1,126 @@
-# Getting Started with Create React App
+# Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and efficient Todo App built with React and TypeScript. Manage your daily tasks with ease — add, edit, delete, and mark them as complete. All your todos are saved in your browser's localStorage, so your data persists even after refreshing or closing the browser.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Add Todos:** Create new tasks with a heading and description.
+- **Edit Todos:** Update existing tasks. Only one todo can be edited at a time; while editing, other actions are disabled.
+- **Delete Todos:** Remove individual tasks from your list.
+- **Mark as Complete/Incomplete:** Toggle tasks between completed and incomplete states.
+- **Bulk Delete Completed:** Remove all completed tasks with a single click.
+- **Persistent Storage:** Todos are stored in browser localStorage for persistence across sessions.
+- **Responsive UI:** Clean, user-friendly layout that works across devices.
+- **Action Button UX:** All action buttons (Edit, Delete, Complete) are aligned in a single line per todo item.
+- **Cancel Editing:** Cancel an edit operation without losing your current todos.
+- **(Optional) Grid View:** View todos in a grid format with AG Grid for advanced display and sorting (can be enabled/disabled in the code).
+- **Visual Feedback:** Completed tasks are visually distinguished.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Screenshots
 
-### `npm test`
+<!-- Add your app screenshots here -->
+<!-- Example: -->
+<!-- ![Todo App Screenshot](./screenshots/main.png) -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Node.js](https://nodejs.org/) (version 14 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. **Clone the repository:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+   ```bash
+   git clone https://github.com/yourusername/todo-app.git
+   cd todo-app
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. **Start the development server:**
 
-## Learn More
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4. **Open in your browser:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Visit `http://localhost:3000` to view the app.
 
+---
+
+## Usage
+
+- Fill in the **Heading** and **Description** fields to add a new todo.
+- Use the **Edit** button to modify a todo (other actions are disabled while editing).
+- Click **Delete** to remove a todo.
+- Click **Complete/Undo** to toggle a todo's completion status.
+- Use **Clear All Completed task** to remove all completed todos at once.
+- If you start editing but want to cancel, click **Cancel**.
+- (Optional) Enable the AG Grid section in the code for advanced grid view.
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/
+│   └── AddToDo.tsx         # Main Todo component
+│   └── AddToDo.css         # CSS for Todo component
+├── utils/
+│   └── useTodos.ts         # Custom hook for localStorage integration
+├── App.tsx
+├── index.tsx
+└── ...
+```
+
+---
+
+## Customization
+
+- **AG Grid View:**  
+  Uncomment the `<AgGridReact />` section in `AddToDo.tsx` to enable the advanced grid/table view for todos.
+
+- **Styling:**  
+  Modify `AddToDo.css` or add your own styles for a personalized look.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for feature requests, bug fixes, or improvements.
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgements
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [AG Grid](https://www.ag-grid.com/)
+
+---
 ![alt text](image.png)
